@@ -1,0 +1,8 @@
+dist
+coverage 
+node_modules
+.git
+.env
+.env.local
+.env.development.local
+.env.test.local
