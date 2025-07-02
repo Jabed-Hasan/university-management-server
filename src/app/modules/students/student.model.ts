@@ -1,6 +1,10 @@
-import {Schema,model,connet} from "mongoose";
-import { Guardian, LocalGuardian, Student, UserName } from "./student.interface";
-
+import { Schema, model } from 'mongoose';
+import {
+  Guardian,
+  LocalGuardian,
+  Student,
+  UserName,
+} from './student.interface';
 
 const UserNameSchema = new Schema<UserName>({
   firstName: { type: String, required: true },
@@ -25,22 +29,21 @@ const localGuardianSchema = new Schema<LocalGuardian>({
 
 const studentSchema = new Schema<Student>({
   id: { type: String, required: true },
-  name:  UserNameSchema,
+  name: UserNameSchema,
   email: { type: String, required: true },
-  gender: ["male", "female"],
-  dateOfBirth: { type: Date},
+  gender: ['male', 'female'],
+  dateOfBirth: { type: Date },
   contactNo: { type: String, required: true },
   emergencyContact: { type: String, required: true },
-  bloodGroup: ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"],
+  bloodGroup: ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'],
   presentAddress: { type: String, required: true },
   permanentAddress: { type: String, required: true },
   guardian: guardianSchema,
   localGuardian: localGuardianSchema,
-  profileImg: { type: String},
-  isActive: ["active", "blocked"],
+  profileImg: { type: String },
+  isActive: ['active', 'blocked'],
 });
 
- 
-const StudentModel = model<Student>("Student", studentSchema);
- 
+const StudentModel = model<Student>('Student', studentSchema);
+
 export default StudentModel;

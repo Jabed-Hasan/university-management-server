@@ -4,7 +4,7 @@ A backend system for managing University operations built with Node.js, Express,
 
 ## Overview
 
-This project serves as the backend API for a University  management system, handling data operations for students, faculty, courses, and administrative functions.
+This project serves as the backend API for a University management system, handling data operations for students, faculty, courses, and administrative functions.
 
 ## Technologies Used
 
@@ -23,12 +23,14 @@ This project serves as the backend API for a University  management system, hand
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/Jabed-Hasan/university-management-server.git
    cd project-setup-backend
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
@@ -42,14 +44,16 @@ This project serves as the backend API for a University  management system, hand
 ### Running the Application
 
 Development mode:
+
 ```bash
 npm run start:dev
 ```
 
 Production build:
+
 ```bash
 npm run build
 npm run start:prod
 ```
 
-## Project Structure 
+## Project Structure
